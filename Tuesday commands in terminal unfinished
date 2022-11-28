@@ -1,0 +1,235 @@
+resume@ubuntu:~$ mkdir week3
+resume@ubuntu:~$ cd week3
+resume@ubuntu:~/week3$ git clone git@github.com:digehode/WAD_documenting_example.git
+Cloning into 'WAD_documenting_example'...
+remote: Enumerating objects: 32, done.
+remote: Counting objects: 100% (32/32), done.
+remote: Compressing objects: 100% (18/18), done.
+remote: Total 32 (delta 10), reused 26 (delta 6), pack-reused 0
+Receiving objects: 100% (32/32), 4.33 KiB | 887.00 KiB/s, done.
+Resolving deltas: 100% (10/10), done.
+resume@ubuntu:~/week3$ install pdoc
+install: missing destination file operand after 'pdoc'
+Try 'install --help' for more information.
+resume@ubuntu:~/week3$ install --help
+Usage: install [OPTION]... [-T] SOURCE DEST
+  or:  install [OPTION]... SOURCE... DIRECTORY
+  or:  install [OPTION]... -t DIRECTORY SOURCE...
+  or:  install [OPTION]... -d DIRECTORY...
+
+This install program copies files (often just compiled) into destination
+locations you choose.  If you want to download and install a ready-to-use
+package on a GNU/Linux system, you should instead be using a package manager
+like yum(1) or apt-get(1).
+
+In the first three forms, copy SOURCE to DEST or multiple SOURCE(s) to
+the existing DIRECTORY, while setting permission modes and owner/group.
+In the 4th form, create all components of the given DIRECTORY(ies).
+
+Mandatory arguments to long options are mandatory for short options too.
+      --backup[=CONTROL]  make a backup of each existing destination file
+  -b                  like --backup but does not accept an argument
+  -c                  (ignored)
+  -C, --compare       compare each pair of source and destination files, and
+                        in some cases, do not modify the destination at all
+  -d, --directory     treat all arguments as directory names; create all
+                        components of the specified directories
+  -D                  create all leading components of DEST except the last,
+                        or all components of --target-directory,
+                        then copy SOURCE to DEST
+  -g, --group=GROUP   set group ownership, instead of process' current group
+  -m, --mode=MODE     set permission mode (as in chmod), instead of rwxr-xr-x
+  -o, --owner=OWNER   set ownership (super-user only)
+  -p, --preserve-timestamps   apply access/modification times of SOURCE files
+                        to corresponding destination files
+  -s, --strip         strip symbol tables
+      --strip-program=PROGRAM  program used to strip binaries
+  -S, --suffix=SUFFIX  override the usual backup suffix
+  -t, --target-directory=DIRECTORY  copy all SOURCE arguments into DIRECTORY
+  -T, --no-target-directory  treat DEST as a normal file
+  -v, --verbose       print the name of each directory as it is created
+      --preserve-context  preserve SELinux security context
+  -Z                      set SELinux security context of destination
+                            file and each created directory to default type
+      --context[=CTX]     like -Z, or if CTX is specified then set the
+                            SELinux or SMACK security context to CTX
+      --help     display this help and exit
+      --version  output version information and exit
+
+The backup suffix is '~', unless set with --suffix or SIMPLE_BACKUP_SUFFIX.
+The version control method may be selected via the --backup option or through
+the VERSION_CONTROL environment variable.  Here are the values:
+
+  none, off       never make backups (even if --backup is given)
+  numbered, t     make numbered backups
+  existing, nil   numbered if numbered backups exist, simple otherwise
+  simple, never   always make simple backups
+
+GNU coreutils online help: <https://www.gnu.org/software/coreutils/>
+Full documentation at: <https://www.gnu.org/software/coreutils/install>
+or available locally via: info '(coreutils) install invocation'
+resume@ubuntu:~/week3$ pip3 install pdoc
+
+Command 'pip3' not found, but can be installed with:
+
+sudo apt install python3-pip
+
+resume@ubuntu:~/week3$ pip install pdoc
+
+Command 'pip' not found, but can be installed with:
+
+sudo apt install python3-pip
+
+resume@ubuntu:~/week3$ python -m pip3 install pdoc
+
+Command 'python' not found, did you mean:
+
+  command 'python3' from deb python3
+  command 'python' from deb python-is-python3
+
+resume@ubuntu:~/week3$ python3 -m pip3 install pdoc
+/usr/bin/python3: No module named pip3
+resume@ubuntu:~/week3$ python3 -m pip install pdoc
+/usr/bin/python3: No module named pip
+resume@ubuntu:~/week3$ [7:05 pm] Academic6
+[7:05: command not found
+resume@ubuntu:~/week3$ python -m venv venv
+
+Command 'python' not found, did you mean:
+
+  command 'python3' from deb python3
+  command 'python' from deb python-is-python3
+
+resume@ubuntu:~/week3$ 
+resume@ubuntu:~/week3$ python3 -m venv venv
+The virtual environment was not created successfully because ensurepip is not
+available.  On Debian/Ubuntu systems, you need to install the python3-venv
+package using the following command.
+
+    apt install python3.8-venv
+
+You may need to use sudo with that command.  After installing the python3-venv
+package, recreate your virtual environment.
+
+Failing command: ['/home/resume/week3/venv/bin/python3', '-Im', 'ensurepip', '--upgrade', '--default-pip']
+
+resume@ubuntu:~/week3$ apt install python3.8-venv
+E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)
+E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are you root?
+resume@ubuntu:~/week3$ sudo apt install python3.8-venv
+[sudo] password for resume: 
+cSorry, try again.
+[sudo] password for resume: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  python-pip-whl python3-distutils python3-lib2to3
+The following NEW packages will be installed
+  python-pip-whl python3-distutils python3-lib2to3 python3.8-venv
+0 to upgrade, 4 to newly install, 0 to remove and 104 not to upgrade.
+Need to get 2,028 kB of archives.
+After this operation, 4,453 kB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 http://us.archive.ubuntu.com/ubuntu focal-updates/universe amd64 python-pip-whl all 20.0.2-5ubuntu1.6 [1,805 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 python3-lib2to3 all 3.8.10-0ubuntu1~20.04 [76.3 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 python3-distutils all 3.8.10-0ubuntu1~20.04 [141 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu focal-updates/universe amd64 python3.8-venv amd64 3.8.10-0ubuntu1~20.04.5 [5,444 B]
+Fetched 2,028 kB in 1s (2,130 kB/s)       
+Selecting previously unselected package python-pip-whl.
+(Reading database ... 157792 files and directories currently installed.)
+Preparing to unpack .../python-pip-whl_20.0.2-5ubuntu1.6_all.deb ...
+Unpacking python-pip-whl (20.0.2-5ubuntu1.6) ...
+Selecting previously unselected package python3-lib2to3.
+Preparing to unpack .../python3-lib2to3_3.8.10-0ubuntu1~20.04_all.deb ...
+Unpacking python3-lib2to3 (3.8.10-0ubuntu1~20.04) ...
+Selecting previously unselected package python3-distutils.
+Preparing to unpack .../python3-distutils_3.8.10-0ubuntu1~20.04_all.deb ...
+Unpacking python3-distutils (3.8.10-0ubuntu1~20.04) ...
+Selecting previously unselected package python3.8-venv.
+Preparing to unpack .../python3.8-venv_3.8.10-0ubuntu1~20.04.5_amd64.deb ...
+Unpacking python3.8-venv (3.8.10-0ubuntu1~20.04.5) ...
+Setting up python-pip-whl (20.0.2-5ubuntu1.6) ...
+Setting up python3-lib2to3 (3.8.10-0ubuntu1~20.04) ...
+Setting up python3-distutils (3.8.10-0ubuntu1~20.04) ...
+Setting up python3.8-venv (3.8.10-0ubuntu1~20.04.5) ...
+resume@ubuntu:~/week3$ python3 -m venv venv
+resume@ubuntu:~/week3$ ls
+venv  WAD_documenting_example
+resume@ubuntu:~/week3$ . ./venv/bin/activate
+(venv) resume@ubuntu:~/week3$ pip3 install pdoc
+Collecting pdoc
+  Downloading pdoc-12.3.0-py3-none-any.whl (129 kB)
+     |████████████████████████████████| 129 kB 4.9 MB/s 
+Collecting astunparse; python_version < "3.9"
+  Downloading astunparse-1.6.3-py2.py3-none-any.whl (12 kB)
+Collecting pygments>=2.12.0
+  Downloading Pygments-2.13.0-py3-none-any.whl (1.1 MB)
+     |████████████████████████████████| 1.1 MB 28.9 MB/s 
+Collecting Jinja2>=2.11.0
+  Downloading Jinja2-3.1.2-py3-none-any.whl (133 kB)
+     |████████████████████████████████| 133 kB 25.3 MB/s 
+Collecting MarkupSafe
+  Downloading MarkupSafe-2.1.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (25 kB)
+Collecting wheel<1.0,>=0.23.0
+  Downloading wheel-0.38.4-py3-none-any.whl (36 kB)
+Collecting six<2.0,>=1.6.1
+  Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
+Installing collected packages: wheel, six, astunparse, pygments, MarkupSafe, Jinja2, pdoc
+Successfully installed Jinja2-3.1.2 MarkupSafe-2.1.1 astunparse-1.6.3 pdoc-12.3.0 pygments-2.13.0 six-1.16.0 wheel-0.38.4
+(venv) resume@ubuntu:~/week3$ pdoc cards.py
+Warn: Cannot find spec for cards.py (from cards.py):
+Traceback (most recent call last):
+  File "/home/resume/week3/venv/lib/python3.8/site-packages/pdoc/extract.py", line 61, in walk_specs
+    modspec = importlib.util.find_spec(modname)
+  File "/usr/lib/python3.8/importlib/util.py", line 94, in find_spec
+    parent = __import__(parent_name, fromlist=['__path__'])
+ModuleNotFoundError: No module named 'cards'
+ (/home/resume/week3/venv/lib/python3.8/site-packages/pdoc/web.py:105)
+Traceback (most recent call last):
+  File "/home/resume/week3/venv/bin/pdoc", line 8, in <module>
+    sys.exit(cli())
+  File "/home/resume/week3/venv/lib/python3.8/site-packages/pdoc/__main__.py", line 193, in cli
+    httpd = pdoc.web.DocServer((opts.host, opts.port or 8080), opts.modules)
+  File "/home/resume/week3/venv/lib/python3.8/site-packages/pdoc/web.py", line 105, in __init__
+    module_names = extract.walk_specs(specs)
+  File "/home/resume/week3/venv/lib/python3.8/site-packages/pdoc/extract.py", line 86, in walk_specs
+    raise ValueError(
+ValueError: No modules found matching spec: cards.py
+(venv) resume@ubuntu:~/week3$ ls
+venv  WAD_documenting_example
+(venv) resume@ubuntu:~/week3$ cd venv
+(venv) resume@ubuntu:~/week3/venv$ ls
+bin  include  lib  lib64  pyvenv.cfg  share
+(venv) resume@ubuntu:~/week3/venv$ cd
+(venv) resume@ubuntu:~$ cd week3
+(venv) resume@ubuntu:~/week3$ ls
+venv  WAD_documenting_example
+(venv) resume@ubuntu:~/week3$ cd WAD_documenting_example/src
+(venv) resume@ubuntu:~/week3/WAD_documenting_example/src$ ls
+cards.py  demo.py
+(venv) resume@ubuntu:~/week3/WAD_documenting_example/src$ pdoc cards.py
+pdoc server ready at http://localhost:8080
+
+^C(venv) resume@ubuntu:~/week3/WAD_documenting_example/src$ python cards.py
+(venv) resume@ubuntu:~/week3/WAD_documenting_example/src$ python
+Python 3.8.10 (default, Jun 22 2022, 20:18:18) 
+[GCC 9.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> cards.py
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'cards' is not defined
+>>> import cards
+>>> myDeck = cards.createDeck()
+>>> myDeck
+['A♥', '2♥', '3♥', '4♥', '5♥', '6♥', '7♥', '8♥', '9♥', '10♥', '11♥', 'J♥', 'Q♥', 'K♥', 'A♠', '2♠', '3♠', '4♠', '5♠', '6♠', '7♠', '8♠', '9♠', '10♠', '11♠', 'J♠', 'Q♠', 'K♠', 'A♦', '2♦', '3♦', '4♦', '5♦', '6♦', '7♦', '8♦', '9♦', '10♦', '11♦', 'J♦', 'Q♦', 'K♦', 'A♣', '2♣', '3♣', '4♣', '5♣', '6♣', '7♣', '8♣', '9♣', '10♣', '11♣', 'J♣', 'Q♣', 'K♣']
+>>> 
+KeyboardInterrupt
+>>> q
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'q' is not defined
+>>> 
+(venv) resume@ubuntu:~/week3/WAD_documenting_example/src$ 
+
